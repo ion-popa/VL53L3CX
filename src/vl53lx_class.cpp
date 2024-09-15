@@ -28486,3 +28486,14 @@ VL53LX_Error VL53LX::VL53LX_PerformOffsetPerVcselCalibration(
 
   return Status;
 }
+
+VL53LX_Error VL53LX::VL53LX_GetModelID(uint8_t *modelId)
+{
+    uint8_t byte_value;
+    int status = VL53LX_RdByte(
+                 Dev,
+                 VL53LX_IDENTIFICATION__MODEL_ID,
+                 &byte_value);
+    *modelId = byte_value;
+    return status;
+}

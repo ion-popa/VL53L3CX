@@ -287,6 +287,17 @@ class VL53LX : public RangeSensor {
      */
     VL53LX_Error VL53LX_GetUID(uint64_t *pUid);
 
+    /**
+     * @brief Reads the device model ID
+     * 
+     * @note This function Access to the device
+     * 
+     * @param modelId               Pointer to current device model ID
+     * @return VL53LX_Error         Success
+     * @return  "Other error code"  See ::VL53LX_Error
+     */
+    VL53LX_Error VL53LX_GetModelID(uint8_t *modelId);
+
 
     /** @} VL53LX_general_group */
 
