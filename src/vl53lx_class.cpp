@@ -27370,7 +27370,7 @@ VL53LX_Error VL53LX::GetInterMeasurementPeriodMilliSeconds(
   uint32_t *pInterMeasurementPeriodMilliSeconds)
 {
   VL53LX_Error Status = VL53LX_ERROR_NONE;
-  uint32_t adjustedIMP;
+  uint32_t adjustedIMP = 0;
 
 
   Status = VL53LX_get_inter_measurement_period_ms(&adjustedIMP);
